@@ -5,8 +5,8 @@ object Ceaser {
     for (cur <- str) {
       if (cur.isLetter) {
         val base = if (cur.isUpper) 'A' else 'a'
-        val encryptedChar = ((cur - base + shift) % 26 + base).toChar
-        text.append(encryptedChar)
+        val encrypted = ((cur - base + shift) % 26 + base).toChar
+        text.append(encrypted)
       } else {
         text.append(cur)
       }
